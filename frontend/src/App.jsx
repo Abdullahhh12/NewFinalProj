@@ -18,7 +18,7 @@ function App() {
 
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/upload', formData);
+      const response = await axios.post('https://creditcard-frauddetection.onrender.com/upload', formData);
       setFraudCount(response.data.fraud);
       setLegitCount(response.data.legit);
       setChartData([
